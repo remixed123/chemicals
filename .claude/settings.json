@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(git add -A; git status --short; git commit -F \"$env:TEMP\\\\claude\\\\c--Users-glenn-OneDrive---Optrix-Projects-Water-Treatment-ChemicalWebSite\\\\49d1ef8e-6552-4f0f-9b02-c478995f9f66\\\\scratchpad\\\\commitmsg.txt\"; git push; git log --oneline -3)"
+    ]
+  }
+}

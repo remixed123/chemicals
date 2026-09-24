@@ -44,10 +44,11 @@
 
   const productNo = row => row.querySelector('.pn a').textContent.trim();
 
-  // Accepts "HV-3010", "hv3010", "HV 3010" or just "3010"
+  // Product numbers are 6 digits starting with 100, e.g. 100345.
+  // Accepts spaces/dashes ("100 345", "100-345") and the short form "345".
   function normalise(value) {
-    const digits = value.toUpperCase().replace(/^HV/, '').replace(/[^0-9]/g, '');
-    return digits ? 'HV-' + digits : '';
+    const digits = value.replace(/[^0-9]/g, '');
+    return digits.length === 3 ? '100' + digits : digits;
   }
 
   function showProduct(row) {
@@ -85,8 +86,8 @@
   }
 
   function showNotFound(code) {
-    const prefix = code.slice(0, 4); // e.g. "HV-3"
-    const similar = code ? rows.map(productNo).filter(pn => pn.startsWith(prefix)).slice(0, 6) : [];
+    const prefix = code.slice(0, 4); // "100" + type digit, e.g. "1003" = chlorine
+    const similar = code.length >= 4 ? rows.map(productNo).filter(pn => pn.startsWith(prefix)).slice(0, 6) : [];
     lookupResult.innerHTML = `
       <div class="lr-empty">
         <strong>No product found for ${code || 'that entry'}.</strong>
@@ -95,7 +96,7 @@
       </div>`;
     lookupResult.hidden = false;
     lookupResult.querySelectorAll('[data-pn]').forEach(a => a.addEventListener('click', () => {
-      lookupInput.value = a.dataset.pn.replace('HV-', '');
+      lookupInput.value = a.dataset.pn;
       lookup();
     }));
   }
@@ -115,10 +116,10 @@
     }
   });
 
-  // Deep link support, e.g. index.html?pn=HV-3010
+  // Deep link support, e.g. index.html?pn=100345
   const initial = new URLSearchParams(location.search).get('pn');
   if (initial) {
-    lookupInput.value = normalise(initial).replace('HV-', '');
+    lookupInput.value = normalise(initial);
     lookup();
   }
 })();

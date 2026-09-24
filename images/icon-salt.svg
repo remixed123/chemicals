@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <circle cx="32" cy="32" r="31" fill="#e8eaf6"/>
+  <!-- Salt crystals (cubic NaCl) -->
+  <g stroke="#3949ab" stroke-width="2" stroke-linejoin="round">
+    <polygon points="14,34 24,29 34,34 24,39" fill="#ffffff"/>
+    <polygon points="14,34 24,39 24,50 14,45" fill="#c5cae9"/>
+    <polygon points="24,39 34,34 34,45 24,50" fill="#9fa8da"/>
+
+    <polygon points="30,24 40,19 50,24 40,29" fill="#ffffff"/>
+    <polygon points="30,24 40,29 40,40 30,35" fill="#c5cae9"/>
+    <polygon points="40,29 50,24 50,35 40,40" fill="#9fa8da"/>
+
+    <polygon points="34,44 41,40.5 48,44 41,47.5" fill="#ffffff"/>
+    <polygon points="34,44 41,47.5 41,55 34,51.5" fill="#c5cae9"/>
+    <polygon points="41,47.5 48,44 48,51.5 41,55" fill="#9fa8da"/>
+  </g>
+  <text x="20" y="22" font-family="Segoe UI, Arial" font-size="8" font-weight="800" fill="#3949ab">NaCl</text>
+</svg>
