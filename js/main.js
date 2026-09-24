@@ -35,4 +35,90 @@
     document.getElementById('catalogue').scrollIntoView({ behavior: 'smooth' });
   }));
   search.addEventListener('input', apply);
+
+  // Product number lookup – exact match on product number only
+  const lookupForm = document.getElementById('lookupForm');
+  const lookupInput = document.getElementById('lookupInput');
+  const lookupResult = document.getElementById('lookupResult');
+  const LABELS = ['Category', 'Formula / Active', 'CAS No.', 'Strength', 'SG @ 20°C', 'pH', 'DG Class', 'Packaging'];
+
+  const productNo = row => row.querySelector('.pn a').textContent.trim();
+
+  // Accepts "HV-3010", "hv3010", "HV 3010" or just "3010"
+  function normalise(value) {
+    const digits = value.toUpperCase().replace(/^HV/, '').replace(/[^0-9]/g, '');
+    return digits ? 'HV-' + digits : '';
+  }
+
+  function showProduct(row) {
+    const cells = row.cells;
+    const code = productNo(row);
+    const name = cells[1].querySelector('strong').innerHTML;
+    const use = cells[1].querySelector('small').innerHTML;
+    const details = LABELS.map((label, i) =>
+      `<div class="lr-item"><span class="lr-label">${label}</span><div>${cells[i + 2].innerHTML}</div></div>`).join('');
+
+    lookupResult.innerHTML = `
+      <div class="lr-head">
+        <div class="lr-code">${code}</div>
+        <div class="lr-name"><strong>${name}</strong><small>${use}</small></div>
+        <button type="button" class="lr-close">&times; Clear</button>
+      </div>
+      <div class="lr-grid">${details}</div>
+      <div class="lr-actions">
+        <a href="#" class="btn btn-primary">Request a Quote</a>
+        <a href="#" class="btn btn-outline">Download SDS</a>
+        <a href="#" class="btn btn-outline">Download TDS</a>
+        <a href="#" class="btn btn-outline lr-show">Show in Catalogue</a>
+      </div>`;
+    lookupResult.hidden = false;
+
+    lookupResult.querySelector('.lr-show').addEventListener('click', e => {
+      e.preventDefault();
+      search.value = code;
+      setCategory('all');
+      row.classList.remove('flash');
+      void row.offsetWidth;
+      row.classList.add('flash');
+      row.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    });
+  }
+
+  function showNotFound(code) {
+    const prefix = code.slice(0, 4); // e.g. "HV-3"
+    const similar = code ? rows.map(productNo).filter(pn => pn.startsWith(prefix)).slice(0, 6) : [];
+    lookupResult.innerHTML = `
+      <div class="lr-empty">
+        <strong>No product found for ${code || 'that entry'}.</strong>
+        Check the number and try again.
+        ${similar.length ? `<p class="suggest">Did you mean: ${similar.map(pn => `<a data-pn="${pn}">${pn}</a>`).join('')}</p>` : ''}
+      </div>`;
+    lookupResult.hidden = false;
+    lookupResult.querySelectorAll('[data-pn]').forEach(a => a.addEventListener('click', () => {
+      lookupInput.value = a.dataset.pn.replace('HV-', '');
+      lookup();
+    }));
+  }
+
+  function lookup() {
+    const code = normalise(lookupInput.value);
+    const row = rows.find(r => productNo(r) === code);
+    row ? showProduct(row) : showNotFound(code);
+  }
+
+  lookupForm.addEventListener('submit', e => { e.preventDefault(); lookup(); });
+  lookupResult.addEventListener('click', e => {
+    if (e.target.closest('.lr-close')) {
+      lookupResult.hidden = true;
+      lookupInput.value = '';
+      lookupInput.focus();
+    }
+  });
+
+  // Deep link support, e.g. index.html?pn=HV-3010
+  const initial = new URLSearchParams(location.search).get('pn');
+  if (initial) {
+    lookupInput.value = normalise(initial).replace('HV-', '');
+    lookup();
+  }
 })();

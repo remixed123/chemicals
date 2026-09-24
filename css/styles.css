@@ -106,6 +106,69 @@ img { max-width: 100%; height: auto; display: block; }
 .category-card img { width: 52px; height: 52px; }
 .category-card:hover, .category-card.active { transform: translateY(-3px); border-color: var(--blue); box-shadow: 0 8px 20px rgba(21, 144, 212, .18); }
 
+/* Product number lookup */
+.lookup { background: var(--bg); padding: 8px 0 12px; }
+.lookup-panel {
+  display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-left: 5px solid var(--blue);
+  border-radius: 8px;
+  padding: 22px 26px;
+  box-shadow: 0 2px 10px rgba(10, 61, 107, .05);
+}
+.lookup-intro h2 { font-size: 20px; margin-bottom: 2px; }
+.lookup-intro p { margin: 0; color: var(--muted); font-size: 14px; }
+.lookup-form { display: flex; align-items: stretch; }
+.lookup-prefix {
+  display: flex; align-items: center;
+  padding: 0 12px;
+  background: var(--navy); color: var(--white);
+  font: 700 16px "Consolas", "Courier New", monospace;
+  border-radius: var(--radius) 0 0 var(--radius);
+}
+.lookup-form input {
+  width: 150px;
+  padding: 11px 12px;
+  border: 1px solid var(--border); border-left: 0; border-right: 0;
+  font: 700 16px "Consolas", "Courier New", monospace;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.lookup-form input::placeholder { text-transform: none; letter-spacing: 0; font-weight: 400; }
+.lookup-form input:focus { outline: none; box-shadow: inset 0 0 0 2px var(--blue); }
+.lookup-form .btn { border-radius: 0 var(--radius) var(--radius) 0; }
+
+.lookup-result {
+  margin-top: 14px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  box-shadow: 0 6px 20px rgba(10, 61, 107, .10);
+  overflow: hidden;
+  animation: pop .25s ease-out;
+}
+@keyframes pop { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: none; } }
+.lr-head { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; padding: 18px 26px; background: linear-gradient(90deg, var(--navy), #0f5a95); color: var(--white); }
+.lr-code { font: 700 26px "Consolas", "Courier New", monospace; color: #5fd0f5; }
+.lr-name { flex: 1; min-width: 220px; }
+.lr-name strong { display: block; font-family: "Montserrat", sans-serif; font-size: 20px; }
+.lr-name small { color: #c5d8ea; font-size: 14px; }
+.lr-close { background: none; border: 1px solid rgba(255,255,255,.4); color: var(--white); border-radius: var(--radius); padding: 6px 12px; cursor: pointer; font: 600 13px "Open Sans", Arial, sans-serif; }
+.lr-close:hover { background: rgba(255,255,255,.12); }
+.lr-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 0; }
+.lr-item { padding: 14px 26px; border-right: 1px solid #edf1f4; border-bottom: 1px solid #edf1f4; }
+.lr-item .lr-label { display: block; font-size: 11.5px; text-transform: uppercase; letter-spacing: .5px; color: var(--muted); font-weight: 600; margin-bottom: 4px; }
+.lr-item div { font-size: 15px; font-weight: 600; color: var(--text); }
+.lr-item small { display: block; color: var(--muted); font-size: 12.5px; font-weight: 400; }
+.lr-actions { display: flex; gap: 10px; flex-wrap: wrap; padding: 16px 26px; background: #fafcfd; }
+.lr-empty { padding: 20px 26px; color: var(--text); }
+.lr-empty strong { color: #c62828; }
+.lr-empty .suggest a { font-family: "Consolas", "Courier New", monospace; font-weight: 700; margin-right: 12px; cursor: pointer; }
+
+.product-table tbody tr.flash td { animation: flash 2.2s ease-out; }
+@keyframes flash { 0%, 40% { background: #fff4c2; } 100% { background: transparent; } }
+
 /* Catalogue */
 .catalogue { background: var(--bg); padding: 20px 0 56px; }
 .catalogue-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; flex-wrap: wrap; margin-bottom: 18px; }
@@ -138,37 +201,36 @@ img { max-width: 100%; height: auto; display: block; }
 
 /* Table */
 .table-wrap { background: var(--white); border: 1px solid var(--border); border-radius: 8px; overflow-x: auto; box-shadow: 0 2px 10px rgba(10, 61, 107, .05); }
-.product-table { width: 100%; border-collapse: collapse; font-size: 14px; min-width: 1150px; }
+.product-table { width: 100%; border-collapse: collapse; font-size: 13px; line-height: 1.4; min-width: 1000px; }
 .product-table thead th {
   background: var(--navy);
   color: var(--white);
   text-align: left;
   font-weight: 600;
-  font-size: 12.5px;
+  font-size: 11px;
   text-transform: uppercase;
-  letter-spacing: .4px;
-  padding: 13px 12px;
+  letter-spacing: .3px;
+  padding: 10px 7px;
   white-space: nowrap;
-  position: sticky; top: 0;
 }
-.product-table td { padding: 12px; border-bottom: 1px solid #edf1f4; vertical-align: middle; }
+.product-table td { padding: 8px 7px; border-bottom: 1px solid #edf1f4; vertical-align: middle; }
+.product-table th:first-child, .product-table td:first-child { padding-left: 14px; }
 .product-table tbody tr:nth-child(even) { background: #fafcfd; }
 .product-table tbody tr:hover { background: var(--blue-light); }
-.product-table td small { display: block; color: var(--muted); font-size: 12.5px; margin-top: 2px; }
+.product-table td small { display: block; color: var(--muted); font-size: 11.5px; margin-top: 1px; }
 .product-table td strong { color: var(--navy); font-weight: 700; }
-.product-table td:nth-child(2) { min-width: 250px; }
-.product-table td:nth-child(6),
+.product-table td:nth-child(2) { min-width: 200px; }
 .product-table td:nth-child(9) small { white-space: nowrap; }
 .product-table .pn a {
   font-family: "Consolas", "Courier New", monospace;
   font-weight: 700;
-  font-size: 14.5px;
+  font-size: 13.5px;
   color: var(--blue);
   white-space: nowrap;
 }
 
 /* Category tags */
-.cat { display: inline-block; padding: 3px 9px; border-radius: 4px; font-size: 12px; font-weight: 600; white-space: nowrap; }
+.cat { display: inline-block; padding: 2px 7px; border-radius: 4px; font-size: 11.5px; font-weight: 600; white-space: nowrap; }
 .cat-acid        { background: #fdecea; color: #b71c1c; }
 .cat-base        { background: #ede7f6; color: #4527a0; }
 .cat-chlorine    { background: #f1f8e9; color: #33691e; }
@@ -181,11 +243,11 @@ img { max-width: 100%; height: auto; display: block; }
 /* Dangerous goods class badges */
 .dg {
   display: inline-block;
-  min-width: 34px;
+  min-width: 28px;
   text-align: center;
-  padding: 2px 7px;
+  padding: 1px 5px;
   border-radius: 4px;
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 700;
   border: 1.5px solid;
 }
@@ -196,9 +258,10 @@ img { max-width: 100%; height: auto; display: block; }
 .dg-none { background: #e8f5e9; color: #2e7d32; border-color: #a5d6a7; }
 
 /* Packaging tags */
-.pk { display: inline-block; background: #f0f4f7; border: 1px solid var(--border); border-radius: 3px; padding: 1px 6px; font-size: 11.5px; margin: 1px 3px 1px 0; white-space: nowrap; }
+.pk { display: inline-block; background: #f0f4f7; border: 1px solid var(--border); border-radius: 3px; padding: 0 5px; font-size: 11px; margin: 1px 2px 1px 0; white-space: nowrap; }
 
-.docs a { display: inline-block; font-size: 12px; font-weight: 700; border: 1px solid var(--blue); border-radius: 3px; padding: 1px 7px; margin-right: 4px; }
+.docs { white-space: nowrap; }
+.docs a { display: inline-block; font-size: 11px; font-weight: 700; border: 1px solid var(--blue); border-radius: 3px; padding: 0 5px; margin-right: 3px; }
 .docs a:hover { background: var(--blue); color: var(--white); text-decoration: none; }
 
 .no-results { padding: 28px; text-align: center; color: var(--muted); margin: 0; }

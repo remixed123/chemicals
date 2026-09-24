@@ -76,6 +76,24 @@
     </div>
   </section>
 
+  <!-- Product number lookup -->
+  <section class="lookup">
+    <div class="container">
+      <div class="lookup-panel">
+        <div class="lookup-intro">
+          <h2>Product Number Lookup</h2>
+          <p>Already know your code? Enter the HydroVant product number to go straight to the product.</p>
+        </div>
+        <form class="lookup-form" id="lookupForm" autocomplete="off">
+          <span class="lookup-prefix">HV-</span>
+          <input type="text" id="lookupInput" placeholder="e.g. 3010" aria-label="Product number">
+          <button type="submit" class="btn btn-primary">Find Product</button>
+        </form>
+      </div>
+      <div class="lookup-result" id="lookupResult" hidden></div>
+    </div>
+  </section>
+
   <!-- Product catalogue -->
   <main class="catalogue" id="catalogue">
     <div class="container">
