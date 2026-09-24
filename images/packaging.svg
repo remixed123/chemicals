@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="260" viewBox="0 0 520 260">
+  <defs>
+    <linearGradient id="drumBlue" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0d4f8b"/>
+      <stop offset="0.4" stop-color="#2f8fd6"/>
+      <stop offset="1" stop-color="#0b4376"/>
+    </linearGradient>
+    <linearGradient id="jerry" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#d9dfe5"/>
+      <stop offset="0.45" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#c3ccd5"/>
+    </linearGradient>
+    <linearGradient id="ibcTank" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f4f7fa"/>
+      <stop offset="1" stop-color="#dbe3ea"/>
+    </linearGradient>
+  </defs>
+  <!-- floor shadow -->
+  <ellipse cx="260" cy="236" rx="240" ry="10" fill="#0a3d6b" opacity="0.12"/>
+
+  <!-- 25 L jerry can -->
+  <g>
+    <path d="M30 120 h58 a8 8 0 0 1 8 8 v96 a8 8 0 0 1 -8 8 h-58 a8 8 0 0 1 -8 -8 v-96 a8 8 0 0 1 8 -8 z" fill="url(#jerry)" stroke="#9aa8b6" stroke-width="1.5"/>
+    <path d="M40 120 v-16 a6 6 0 0 1 6 -6 h24 a6 6 0 0 1 6 6 v16" fill="none" stroke="#9aa8b6" stroke-width="6"/>
+    <rect x="74" y="104" width="14" height="14" rx="2" fill="#1590d4"/>
+    <rect x="34" y="150" width="50" height="46" rx="3" fill="#ffffff" stroke="#c7d1db"/>
+    <rect x="34" y="150" width="50" height="10" rx="2" fill="#0a3d6b"/>
+    <polygon points="59,168 67,176 59,184 51,176" fill="#fff" stroke="#e53935" stroke-width="2"/>
+    <text x="59" y="252" font-family="Segoe UI, Arial" font-size="13" font-weight="600" fill="#35506b" text-anchor="middle">20 L / 25 L</text>
+  </g>
+
+  <!-- 200 L drum -->
+  <g>
+    <rect x="130" y="80" width="100" height="150" rx="6" fill="url(#drumBlue)"/>
+    <ellipse cx="180" cy="80" rx="50" ry="9" fill="#3d9be0"/>
+    <rect x="130" y="118" width="100" height="5" fill="#0a3a66"/>
+    <rect x="130" y="186" width="100" height="5" fill="#0a3a66"/>
+    <rect x="148" y="135" width="64" height="42" rx="3" fill="#ffffff"/>
+    <rect x="148" y="135" width="64" height="9" rx="2" fill="#0a3d6b"/>
+    <text x="180" y="163" font-family="Segoe UI, Arial" font-size="10" font-weight="700" fill="#0a3d6b" text-anchor="middle">HydroVant</text>
+    <text x="180" y="252" font-family="Segoe UI, Arial" font-size="13" font-weight="600" fill="#35506b" text-anchor="middle">200 L Drum</text>
+  </g>
+
+  <!-- 1000 L IBC -->
+  <g>
+    <rect x="262" y="72" width="140" height="150" rx="8" fill="url(#ibcTank)" stroke="#aab7c4" stroke-width="1.5"/>
+    <rect x="262" y="150" width="140" height="72" fill="#bfe6f8" opacity="0.7"/>
+    <g stroke="#7d8e9f" stroke-width="3" fill="none">
+      <rect x="258" y="68" width="148" height="158" rx="4"/>
+      <line x1="295" y1="68" x2="295" y2="226"/>
+      <line x1="332" y1="68" x2="332" y2="226"/>
+      <line x1="369" y1="68" x2="369" y2="226"/>
+      <line x1="258" y1="110" x2="406" y2="110"/>
+      <line x1="258" y1="150" x2="406" y2="150"/>
+      <line x1="258" y1="190" x2="406" y2="190"/>
+    </g>
+    <rect x="252" y="224" width="160" height="10" fill="#5d6d7e"/>
+    <circle cx="332" cy="64" r="9" fill="#1590d4"/>
+    <text x="332" y="252" font-family="Segoe UI, Arial" font-size="13" font-weight="600" fill="#35506b" text-anchor="middle">1,000 L IBC</text>
+  </g>
+
+  <!-- 25 kg bag -->
+  <g>
+    <path d="M428 118 q42 -10 84 0 l-4 108 q-38 8 -76 0 z" fill="#f5efe2" stroke="#c9b98f" stroke-width="1.5"/>
+    <rect x="440" y="145" width="60" height="40" rx="3" fill="#ffffff" stroke="#d8ccae"/>
+    <rect x="440" y="145" width="60" height="9" rx="2" fill="#0a3d6b"/>
+    <text x="470" y="173" font-family="Segoe UI, Arial" font-size="10" font-weight="700" fill="#0a3d6b" text-anchor="middle">25 kg</text>
+    <text x="470" y="252" font-family="Segoe UI, Arial" font-size="13" font-weight="600" fill="#35506b" text-anchor="middle">25 kg Bag</text>
+  </g>
+</svg>

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <circle cx="32" cy="32" r="31" fill="#fff3e0"/>
+  <!-- Scattered particles converging -->
+  <g fill="#ef6c00">
+    <circle cx="16" cy="20" r="2.5"/>
+    <circle cx="48" cy="18" r="2.5"/>
+    <circle cx="14" cy="42" r="2.5"/>
+    <circle cx="50" cy="44" r="2.5"/>
+    <circle cx="32" cy="12" r="2"/>
+    <circle cx="32" cy="53" r="2"/>
+  </g>
+  <g stroke="#ffb74d" stroke-width="2" stroke-linecap="round">
+    <line x1="19" y1="22" x2="25" y2="27"/>
+    <line x1="45" y1="20" x2="39" y2="26"/>
+    <line x1="17" y1="40" x2="24" y2="36"/>
+    <line x1="47" y1="42" x2="40" y2="37"/>
+  </g>
+  <circle cx="32" cy="32" r="9" fill="#fb8c00"/>
+  <text x="32" y="35.5" font-family="Segoe UI, Arial" font-size="8" font-weight="800" fill="#ffffff" text-anchor="middle">Al</text>
+</svg>

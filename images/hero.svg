@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="480" viewBox="0 0 1600 480" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#062a4d"/>
+      <stop offset="0.55" stop-color="#0a4f8a"/>
+      <stop offset="1" stop-color="#1283c4"/>
+    </linearGradient>
+    <linearGradient id="water" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3cc4f0" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#0b6fb3" stop-opacity="0.9"/>
+    </linearGradient>
+    <linearGradient id="steel" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#8fa4b8"/>
+      <stop offset="0.45" stop-color="#dbe5ee"/>
+      <stop offset="1" stop-color="#7d93a8"/>
+    </linearGradient>
+    <linearGradient id="tankBlue" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#1b6fae"/>
+      <stop offset="0.45" stop-color="#4aa6e0"/>
+      <stop offset="1" stop-color="#155d94"/>
+    </linearGradient>
+    <linearGradient id="fade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#062a4d" stop-opacity="0.95"/>
+      <stop offset="0.45" stop-color="#062a4d" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#062a4d" stop-opacity="0"/>
+    </linearGradient>
+    <pattern id="hex" width="56" height="48.5" patternUnits="userSpaceOnUse">
+      <polygon points="14,0 42,0 56,24.25 42,48.5 14,48.5 0,24.25" fill="none" stroke="#ffffff" stroke-opacity="0.05" stroke-width="1.2"/>
+    </pattern>
+  </defs>
+
+  <rect width="1600" height="480" fill="url(#sky)"/>
+  <rect width="1600" height="480" fill="url(#hex)"/>
+
+  <!-- Molecule motif -->
+  <g stroke="#ffffff" stroke-opacity="0.18" stroke-width="2" fill="#ffffff" fill-opacity="0.12">
+    <line x1="1180" y1="70" x2="1260" y2="110"/>
+    <line x1="1260" y1="110" x2="1340" y2="70"/>
+    <line x1="1260" y1="110" x2="1260" y2="190"/>
+    <line x1="1340" y1="70" x2="1420" y2="110"/>
+    <circle cx="1180" cy="70" r="14"/>
+    <circle cx="1260" cy="110" r="20"/>
+    <circle cx="1340" cy="70" r="14"/>
+    <circle cx="1260" cy="190" r="12"/>
+    <circle cx="1420" cy="110" r="16"/>
+  </g>
+
+  <!-- Background storage tanks -->
+  <g opacity="0.95">
+    <rect x="880" y="200" width="120" height="190" rx="6" fill="url(#steel)"/>
+    <ellipse cx="940" cy="200" rx="60" ry="14" fill="#c9d6e2"/>
+    <rect x="880" y="250" width="120" height="6" fill="#6b8096"/>
+    <rect x="880" y="320" width="120" height="6" fill="#6b8096"/>
+
+    <rect x="1020" y="170" width="140" height="220" rx="6" fill="url(#tankBlue)"/>
+    <ellipse cx="1090" cy="170" rx="70" ry="16" fill="#5bb4ea"/>
+    <text x="1090" y="290" font-family="Segoe UI, Arial" font-size="18" font-weight="700" fill="#ffffff" text-anchor="middle" opacity="0.85">NaOCl</text>
+
+    <rect x="1180" y="220" width="110" height="170" rx="6" fill="url(#steel)"/>
+    <ellipse cx="1235" cy="220" rx="55" ry="13" fill="#c9d6e2"/>
+    <text x="1235" y="310" font-family="Segoe UI, Arial" font-size="16" font-weight="700" fill="#35506b" text-anchor="middle">H₂SO₄</text>
+  </g>
+
+  <!-- Clarifier -->
+  <g>
+    <ellipse cx="1400" cy="370" rx="190" ry="36" fill="#9fb2c4"/>
+    <rect x="1210" y="330" width="380" height="40" fill="#b8c7d5"/>
+    <ellipse cx="1400" cy="330" rx="190" ry="36" fill="#d4dfe8"/>
+    <ellipse cx="1400" cy="332" rx="172" ry="29" fill="url(#water)"/>
+    <line x1="1228" y1="326" x2="1572" y2="326" stroke="#6b8096" stroke-width="4"/>
+    <circle cx="1400" cy="326" r="10" fill="#6b8096"/>
+  </g>
+
+  <!-- Pipe rack -->
+  <g stroke-linecap="round">
+    <path d="M760 400 L860 400 L860 300 L880 300" fill="none" stroke="#8fa4b8" stroke-width="12"/>
+    <path d="M1000 360 L1020 360" fill="none" stroke="#8fa4b8" stroke-width="10"/>
+    <path d="M1160 380 L1180 380" fill="none" stroke="#8fa4b8" stroke-width="10"/>
+    <path d="M1290 300 L1320 300 L1320 312" fill="none" stroke="#8fa4b8" stroke-width="10"/>
+    <circle cx="820" cy="400" r="12" fill="#e2463d"/>
+  </g>
+
+  <!-- Ground -->
+  <rect x="0" y="390" width="1600" height="90" fill="#052240" opacity="0.65"/>
+
+  <!-- Waves -->
+  <path d="M0 420 C200 395 400 445 600 420 C800 395 1000 445 1200 420 C1400 395 1500 440 1600 425 L1600 480 L0 480 Z" fill="#1590d4" opacity="0.45"/>
+  <path d="M0 440 C220 420 420 465 640 442 C860 420 1060 465 1280 442 C1420 428 1520 455 1600 448 L1600 480 L0 480 Z" fill="#29b6e8" opacity="0.5"/>
+
+  <!-- Left fade so text is readable -->
+  <rect width="1600" height="480" fill="url(#fade)"/>
+</svg>

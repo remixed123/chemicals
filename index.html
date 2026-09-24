@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Water Treatment Chemicals | HydroVant Chemicals</title>
+  <meta name="description" content="HydroVant Chemicals supplies acids, alkalis, chlorine disinfectants, antiscalants, coagulants and flocculants for municipal and industrial water treatment.">
+  <link rel="icon" href="images/icon-antiscalant.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Utility bar -->
+  <div class="utility-bar">
+    <div class="container utility-inner">
+      <div class="utility-left">
+        <span>&#9742; Sales: (02) 5550 4400</span>
+        <span class="emergency">&#9888; 24/7 Emergency: 1800 160 401</span>
+      </div>
+      <div class="utility-right">
+        <a href="#">SDS Library</a>
+        <a href="#">Track Order</a>
+        <a href="#">Customer Login</a>
+        <span class="region">AU / NZ &#9662;</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#" class="logo"><img src="images/logo.svg" alt="HydroVant Chemicals" width="220" height="47"></a>
+      <nav class="main-nav">
+        <a href="#" class="active">Products</a>
+        <a href="#">Industries</a>
+        <a href="#">Services</a>
+        <a href="#">Technical Resources</a>
+        <a href="#">About Us</a>
+        <a href="#">Contact</a>
+      </nav>
+      <a href="#" class="btn btn-primary">Request a Quote</a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="breadcrumb"><a href="#">Home</a> / <a href="#">Products</a> / <span>Water Treatment Chemicals</span></div>
+      <h1>Water Treatment Chemicals</h1>
+      <p class="lead">Bulk and packaged chemistry for potable water, wastewater, reverse osmosis, cooling tower and boiler applications. Manufactured and blended under ISO&nbsp;9001 at our Kembla Grange facility, with delivery across Australia and New Zealand.</p>
+      <div class="hero-stats">
+        <div><strong>34</strong><span>Water treatment products</span></div>
+        <div><strong>ISO 9001</strong><span>Certified manufacturing</span></div>
+        <div><strong>NSF/ANSI 60</strong><span>Drinking water grades</span></div>
+        <div><strong>24/7</strong><span>Emergency response</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Categories -->
+  <section class="categories">
+    <div class="container">
+      <div class="category-grid">
+        <button class="category-card" data-filter="acid"><img src="images/icon-acid.svg" alt=""><span>Acids</span></button>
+        <button class="category-card" data-filter="base"><img src="images/icon-base.svg" alt=""><span>Alkalis &amp; Bases</span></button>
+        <button class="category-card" data-filter="chlorine"><img src="images/icon-chlorine.svg" alt=""><span>Chlorine &amp; Disinfection</span></button>
+        <button class="category-card" data-filter="antiscalant"><img src="images/icon-antiscalant.svg" alt=""><span>Antiscalants</span></button>
+        <button class="category-card" data-filter="coagulant"><img src="images/icon-coagulant.svg" alt=""><span>Coagulants</span></button>
+        <button class="category-card" data-filter="flocculant"><img src="images/icon-flocculant.svg" alt=""><span>Flocculants</span></button>
+        <button class="category-card" data-filter="biocide"><img src="images/icon-biocide.svg" alt=""><span>Biocides &amp; Oxidisers</span></button>
+        <button class="category-card" data-filter="specialty"><img src="images/icon-specialty.svg" alt=""><span>Specialty Chemicals</span></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product catalogue -->
+  <main class="catalogue" id="catalogue">
+    <div class="container">
+      <div class="catalogue-head">
+        <div>
+          <h2>Product Catalogue</h2>
+          <p>Select a product number to view the Technical Data Sheet (TDS) and Safety Data Sheet (SDS).</p>
+        </div>
+        <div class="catalogue-tools">
+          <input type="search" id="search" placeholder="Search by product number, name or CAS no.">
+          <a href="#" class="btn btn-outline">&#8681; Download Price List (PDF)</a>
+        </div>
+      </div>
+
+      <div class="filter-bar">
+        <button class="chip active" data-filter="all">All Products</button>
+        <button class="chip" data-filter="acid">Acids</button>
+        <button class="chip" data-filter="base">Alkalis &amp; Bases</button>
+        <button class="chip" data-filter="chlorine">Chlorine</button>
+        <button class="chip" data-filter="antiscalant">Antiscalants</button>
+        <button class="chip" data-filter="coagulant">Coagulants</button>
+        <button class="chip" data-filter="flocculant">Flocculants</button>
+        <button class="chip" data-filter="biocide">Biocides &amp; Oxidisers</button>
+        <button class="chip" data-filter="specialty">Specialty</button>
+        <span class="result-count" id="resultCount">Showing 34 of 34 products</span>
+      </div>
+
+      <div class="table-wrap">
+        <table class="product-table" id="productTable">
+          <thead>
+            <tr>
+              <th>Product No.</th>
+              <th>Product Name</th>
+              <th>Category</th>
+              <th>Formula / Active</th>
+              <th>CAS No.</th>
+              <th>Strength</th>
+              <th>SG @ 20&deg;C</th>
+              <th>pH</th>
+              <th>DG Class</th>
+              <th>Packaging</th>
+              <th>Documents</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- ACIDS -->
+            <tr data-category="acid">
+              <td class="pn"><a href="#">HV-1010</a></td>
+              <td><strong>Sulfuric Acid 98%</strong><small>pH correction, RO feed acidification</small></td>
+              <td><span class="cat cat-acid">Acid</span></td>
+              <td>H<sub>2</sub>SO<sub>4</sub></td>
+              <td>7664-93-9</td>
+              <td>98% w/w</td>
+              <td>1.84</td>
+              <td>&lt; 1</td>
+              <td><span class="dg dg-8">8</span><small>UN1830 PG II</small></td>
+              <td><span class="pk">200 L</span><span class="pk">IBC</span><span class="pk">Bulk</span></td>
+              <td class="docs"><a href="#">SDS</a><a href="#">TDS</a></td>
+            </tr>
+            <tr data-category="acid">
+              <td class="pn"><a href="#">HV-1015</a></td>
+              <td><strong>Sulfuric Acid 50%</strong><small>Diluted grade for small dosing systems</small></td>
+              <td><span class="cat cat-acid">Acid</span></td>
+              <td>H<sub>2</sub>SO<sub>4</sub></td>
+              <td>7664-93-9</td>
+              <td>50% w/w</td>
+              <td>1.40</td>
+              <td>&lt; 1</td>
+              <td><span class="dg dg-8">8</span><small>UN2796 PG II</small></td>
+              <td><span class="pk">25 L</span><span class="pk">IBC</span></td>
+              <td class="docs"><a href="#">SDS</a><a href="#">TDS</a></td>
+            </tr>
+            <tr data-category="acid">
+              <td class="pn"><a href="#">HV-1020</a></td>
+              <td><strong>Hydrochloric Acid 33%</strong><small>Ion exchange regeneration, pH control</small></td>
+              <td><span class="cat cat-acid">Acid</span></td>
+              <td>HCl</td>
+              <td>7647-01-0</td>
+              <td>33% w/w</td>
+              <td>1.16</td>
+              <td>&lt; 1</td>
+              <td><span class="dg dg-8">8</span><small>UN1789 PG II</small></td>
+              <td><span class="pk">25 L</span><span class="pk">IBC</span><span class="pk">Bulk</span></td>
+              <td class="docs"><a href="#">SDS</a><a href="#">TDS</a></td>
+            </tr>
+            <tr data-category="acid">
+              <td class="pn"><a href="#">HV-1030</a></td>
+              <td><strong>Phosphoric Acid 75%</strong><small>Food grade, nutrient dosing for bioreactors</small></td>
+              <td><span class="cat cat-acid">Acid</span></td>
+              <td>H<sub>3</sub>PO<sub>4</sub></td>
+              <td>7664-38-2</td>
+              <td>75% w/w</td>
+              <td>1.58</td>
+              <td>&lt; 1</td>
+              <td><span class="dg dg-8">8</span><small>UN1805 PG III</small></td>
+              <td><span class="pk">25 L</span><span class="pk">200 L</span><span class="pk">IBC</span></td>
+              <td class="docs"><a href="#">SDS</a><a href="#">TDS</a></td>
+            </tr>
+            <tr data-category="acid">
+              <td class="pn"><a href="#">HV-1040</a></td>
+              <td><strong>Citric Acid 50% Solution</strong><small>Membrane cleaning, iron scale removal</small></td>
+              <td><span class="cat cat-acid">Acid</span></td>
+              <td>C<sub>6</sub>H<sub>8</sub>O<sub>7</sub></td>
+              <td>77-92-9</td>
+              <td>50% w/w</td>
+              <td>1.24</td>
+              <td>1.5</td>
+              <td><span class="dg dg-none">Non-DG</span></td>
+              <td><span class="pk">25 L</span><span class="pk">IBC</span></td>
+              <td class="docs"><a href="#">SDS</a><a href="#">TDS</a></td>
+            </tr>
+
+            <!-- BASES -->
+            <tr data-category="base">
+              <td class="pn"><a href="#">HV-2010</a></td>
+              <td><strong>Caustic Soda 50% (Sodium Hydroxide)</strong><small>pH &amp; alkalinity adjustment, resin regeneration</small></td>
+              <td><span class="cat cat-base">Base</span></td>
+              <td>NaOH</td>
+              <td>1310-73-2</td>
+              <td>50% w/w</td>
+              <td>1.52</td>
+              <td>14</td>
+              <td><span class="dg dg-8">8</span><small>UN1824 PG II</small></td>
+              <td><span class="pk">25 L</span><span class="pk">IBC</span><span class="pk">Bulk</span></td>
+              <td class="docs"><a href="#">SDS</a><a href="#">TDS</a></td>
+            </tr>
+            <tr data-category="base">
+              <td class="pn"><a href="#">HV-2020</a></td>
+              <td><strong>Caustic Soda 32% (Sodium Hydroxide)</strong><small>Winter-stable grade, lower freezing point</small></td>
+              <td><span class="cat cat-base">Base</span></td>
+              <td>NaOH</td>
+              <td>1310-73-2</td>
+              <td>32% w/w</td>
+              <td>1.35</td>
+              <td>14</td>
+              <td><span class="dg dg-8">8</span><small>UN1824 PG II</small></td>
+              <td><span class="pk">25 L</span><span class="pk">IBC</span><span class="pk">Bulk</span></td>
+              <td class="docs"><a href="#">SDS</a><a href="#">TDS</a></td>
+            </tr>
+            <tr data-category="base">
+              <td class="pn"><a href="#">HV-2030</a></td>
+              <td><strong>Hydrated Lime Slurry 30%</strong><small>Softening, remineralisation, sludge conditioning</small></td>
+              <td><span class="cat cat-base">Base</span></td>
+              <td>Ca(OH)<sub>2</sub></td>
+              <td>1305-62-0</td>
+              <td>30% w/w</td>
+              <td>1.22</td>
+              <td>12.4</td>
+              <td><span class="dg dg-none">Non-DG</span></td>
+              <td><span class="pk">IBC</span><span class="pk">Bulk</span></td>
+              <td class="docs"><a href="#">SDS</a><a href="#">TDS</a></td>
+            </tr>
+            <tr data-category="base">
+              <td class="pn"><a href="#">HV-2040</a></td>
+              <td><strong>Soda Ash Light (Sodium Carbonate)</strong><small>Alkalinity boost, pool &amp; potable pH</small></td>
+              <td><span class="cat cat-base">Base</span></td>
+              <td>Na<sub>2</sub>CO<sub>3</sub></td>
+              <td>497-19-8</td>
+              <td>99.2% min</td>
+              <td>Powder</td>
+              <td>11.4<sup>*</sup></td>
+              <td><span class="dg dg-none">Non-DG</span></td>
+              <td><span class="pk">25 kg</span><span class="pk">1 t Bulka</span></td>
+              <td class="docs"><a href="#">SDS</a><a href="#">TDS</a></td>
+            </tr>
+            <tr data-category="base">
+              <td class="pn"><a href="#">HV-2050</a></td>
+              <td><strong>Magnesium Hydroxide Slurry 60%</strong><small>Safe alkali for wastewater &amp; H<sub>2</sub>S control</small></td>
+              <td><span class="cat cat-base">Base</span></td>
+              <td>Mg(OH)<sub>2</sub></td>
+              <td>1309-42-8</td>
+              <td>60% w/w</td>
+              <td>1.52</td>
+              <td>10.5</td>
+              <td><span class="dg dg-none">Non-DG</span></td>
+              <td><span class="pk">IBC</span><span class="pk">Bulk</span></td>
+              <td class="docs"><a href="#">SDS</a><a href="#">TDS</a></td>
+            </tr>
+
+            <!-- CHLORINE -->
+            <tr data-category="chlorine">
+              <td class="pn"><a href="#">HV-3010</a></td>
+              <td><strong>Sodium Hypochlorite 12.5%</strong><small>Primary &amp; residual disinfection</small></td>
+              <td><span class="cat cat-chlorine">Chlorine</span></td>
+              <td>NaOCl</td>
+              <td>7681-52-9</td>
+              <td>12.5% av. Cl<sub>2</sub></td>
+              <td>1.21</td>
+              <td>12.5</td>
+              <td><span class="dg dg-8">8</span><small>UN1791 PG III</small></td>
+              <td><span class="pk">15 L</span><span class="pk">IBC</span><span class="pk">Bulk</span></td>
+              <td class="docs"><a href="#">SDS</a><a href="#">TDS</a></td>
+            </tr>
+            <tr data-category="chlorine">
+              <td class="pn"><a href="#">HV-3020</a></td>
+              <td><strong>Calcium Hypochlorite 65% Granular</strong><small>Tank &amp; mains disinfection, remote sites</small></td>
+              <td><span class="cat cat-chlorine">Chlorine</span></td>
+              <td>Ca(OCl)<sub>2</sub></td>
+              <td>7778-54-3</td>
+              <td>65% av. Cl<sub>2</sub></td>
+              <td>Granule</td>
+              <td>10.8<sup>*</sup></td>
+              <td><span class="dg dg-51">5.1</span><small>UN2880 PG II</small></td>
+              <td><span class="pk">10 kg</span><span class="pk">40 kg</span></td>
+              <td class="docs"><a href="#">SDS</a><a href="#">TDS</a></td>
+            </tr>
+            <tr data-category="chlorine">
+              <td class="pn"><a href="#">HV-3030</a></td>
+              <td><strong>Trichlor 200 g Tablets (TCCA)</strong><small>Erosion feeder chlorination</small></td>
+              <td><span class="cat cat-chlorine">Chlorine</span></td>
+              <td>C<sub>3</sub>Cl<sub>3</sub>N<sub>3</sub>O<sub>3</sub></td>
+              <td>87-90-1</td>
+              <td>90% av. Cl<sub>2</sub></td>
+              <td>Tablet</td>
+              <td>2.9<sup>*</sup></td>
+              <td><span class="dg dg-51">5.1</span><small>UN2468 PG II</small></td>
+              <td><span class="pk">10 kg</span><span class="pk">40 kg</span></td>
+              <td class="docs"><a href="#">SDS</a><a href="#">TDS</a></td>
+            </tr>
+            <tr data-category="chlorine">
+              <td class="pn"><a href="#">HV-3040</a></td>
+              <td><strong>Sodium Chlorite 25%</strong><small>Chlorine dioxide generator precursor</small></td>
+              <td><span class="cat cat-chlorine">Chlorine</span></td>
+              <td>NaClO<sub>2</sub></td>
+              <td>7758-19-2</td>
+              <td>25% w/w</td>
+              <td>1.23</td>
+              <td>12.0</td>
+              <td><span class="dg dg-8">8</span><small>UN1908 PG II</small></td>
+              <td><span class="pk">25 L</span><span class="pk">IBC</span></td>
+              <td class="docs"><a href="#">SDS</a><a href="#">TDS</a></td>
+            </tr>
+
+            <!-- ANTISCALANTS -->
+            <tr data-category="antiscalant">
+              <td class="pn"><a href="#">HV-4010</a></td>
+              <td><strong>ScaleGuard&trade; RO-100</strong><small>Phosphonate antiscalant for RO / NF membranes</small></td>
+              <td><span class="cat cat-antiscalant">Antiscalant</span></td>
+              <td>ATMP blend</td>
+              <td>6419-19-8</td>
+              <td>Dose 2&ndash;5 mg/L</td>
+              <td>1.33</td>
+              <td>2.0</td>
+              <td><span class="dg dg-8">8</span><small>UN3265 PG III</small></td>
+              <td><span class="pk">25 L</span><span class="pk">200 L</span><span class="pk">IBC</span></td>
+              <td class="docs"><a href="#">SDS</a><a href="#">TDS</a></td>
+            </tr>
+            <tr data-category="antiscalant">
+              <td class="pn"><a href="#">HV-4020</a></td>
+              <td><strong>ScaleGuard&trade; RO-200 Potable</strong><small>NSF/ANSI 60 approved, drinking water RO</small></td>
+              <td><span class="cat cat-antiscalant">Antiscalant</span></td>
+              <td>Polycarboxylate</td>
+              <td>Proprietary</td>
+              <td>Dose 1&ndash;4 mg/L</td>
+              <td>1.15</td>
+              <td>4.5</td>
+              <td><span class="dg dg-none">Non-DG</span></td>
+              <td><span class="pk">25 L</span><span class="pk">IBC</span></td>
+              <td class="docs"><a href="#">SDS</a><a href="#">TDS</a></td>
+            </tr>
+            <tr data-category="antiscalant">
+              <td class="pn"><a href="#">HV-4030</a></td>
+              <td><strong>ScaleGuard&trade; CT-300</strong><small>Cooling tower scale &amp; corrosion inhibitor</small></td>
+              <td><span class="cat cat-antiscalant">Antiscalant</span></td>
+              <td>HEDP / PBTC</td>
+              <td>2809-21-4</td>
+              <td>Dose 10&ndash;30 mg/L</td>
+              <td>1.30</td>
+              <td>&lt; 2</td>
+              <td><span class="dg dg-8">8</span><small>UN3265 PG III</small></td>
+              <td><span class="pk">25 L</span><span class="pk">200 L</span><span class="pk">IBC</span></td>
+              <td class="docs"><a href="#">SDS</a><a href="#">TDS</a></td>
+            </tr>
+            <tr data-category="antiscalant">
+              <td class="pn"><a href="#">HV-4040</a></td>
+              <td><strong>ScaleGuard&trade; BW-400</strong><small>Boiler water sludge conditioner</small></td>
+              <td><span class="cat cat-antiscalant">Antiscalant</span></td>
+              <td>Sodium polyacrylate</td>
+              <td>9003-04-7</td>
+              <td>45% solids</td>
+              <td>1.10</td>
+              <td>7.0</td>
+              <td><span class="dg dg-none">Non-DG</span></td>
+              <td><span class="pk">25 L</span><span class="pk">200 L</span></td>
+              <td class="docs"><a href="#">SDS</a><a href="#">TDS</a></td>
+            </tr>
+
+            <!-- COAGULANTS -->
+            <tr data-category="coagulant">
+              <td class="pn"><a href="#">HV-5010</a></td>
+              <td><strong>Liquid Alum 47% (Aluminium Sulfate)</strong><small>Clarification &amp; turbidity removal</small></td>
+              <td><span class="cat cat-coagulant">Coagulant</span></td>
+              <td>Al<sub>2</sub>(SO<sub>4</sub>)<sub>3</sub></td>
+              <td>10043-01-3</td>
+              <td>8.0% Al<sub>2</sub>O<sub>3</sub></td>
+              <td>1.33</td>
+              <td>2.3</td>
+              <td><span class="dg dg-none">Non-DG</span></td>
+              <td><span class="pk">IBC</span><span class="pk">Bulk</span></td>
+              <td class="docs"><a href="#">SDS</a><a href="#">TDS</a></td>
+            </tr>
+            <tr data-category="coagulant">
+              <td class="pn"><a href="#">HV-5020</a></td>
+              <td><strong>Ferric Chloride 42%</strong><small>Phosphorus removal, sludge dewatering</small></td>
+              <td><span class="cat cat-coagulant">Coagulant</span></td>
+              <td>FeCl<sub>3</sub></td>
+              <td>7705-08-0</td>
+              <td>42% w/w</td>
+              <td>1.45</td>
+              <td>&lt; 1</td>
+              <td><span class="dg dg-8">8</span><small>UN2582 PG III</small></td>
+              <td><span class="pk">IBC</span><span class="pk">Bulk</span></td>
+              <td class="docs"><a href="#">SDS</a><a href="#">TDS</a></td>
+            </tr>
+            <tr data-category="coagulant">
+              <td class="pn"><a href="#">HV-5030</a></td>
+              <td><strong>PAC-10 Polyaluminium Chloride</strong><small>High-basicity coagulant, low alkalinity demand</small></td>
+              <td><span class="cat cat-coagulant">Coagulant</span></td>
+              <td>[Al<sub>2</sub>(OH)<sub>n</sub>Cl<sub>6-n</sub>]<sub>m</sub></td>
+              <td>1327-41-9</td>
+              <td>10% Al<sub>2</sub>O<sub>3</sub></td>
+              <td>1.20</td>
+              <td>3.5</td>
+              <td><span class="dg dg-8">8</span><small>UN3264 PG III</small></td>
+              <td><span class="pk">25 L</span><span class="pk">IBC</span><span class="pk">Bulk</span></td>
+              <td class="docs"><a href="#">SDS</a><a href="#">TDS</a></td>
+            </tr>
+            <tr data-category="coagulant">
+              <td class="pn"><a href="#">HV-5040</a></td>
+              <td><strong>Ferric Sulfate 43%</strong><small>Coagulation of highly coloured waters</small></td>
+              <td><span class="cat cat-coagulant">Coagulant</span></td>
+              <td>Fe<sub>2</sub>(SO<sub>4</sub>)<sub>3</sub></td>
+              <td>10028-22-5</td>
+              <td>12% Fe<sup>3+</sup></td>
+              <td>1.55</td>
+              <td>&lt; 1</td>
+              <td><span class="dg dg-8">8</span><small>UN3264 PG III</small></td>
+              <td><span class="pk">IBC</span><span class="pk">Bulk</span></td>
+              <td class="docs"><a href="#">SDS</a><a href="#">TDS</a></td>
+            </tr>
+
+            <!-- FLOCCULANTS -->
+            <tr data-category="flocculant">
+              <td class="pn"><a href="#">HV-6010</a></td>
+              <td><strong>FloxPro&trade; A-120 Anionic</strong><small>Medium charge, high MW &ndash; clarifier aid</small></td>
+              <td><span class="cat cat-flocculant">Flocculant</span></td>
+              <td>Anionic polyacrylamide</td>
+              <td>25085-02-3</td>
+              <td>~20% charge</td>
+              <td>Powder</td>
+              <td>6&ndash;8<sup>*</sup></td>
+              <td><span class="dg dg-none">Non-DG</span></td>
+              <td><span class="pk">25 kg</span><span class="pk">750 kg</span></td>
+              <td class="docs"><a href="#">SDS</a><a href="#">TDS</a></td>
+            </tr>
+            <tr data-category="flocculant">
+              <td class="pn"><a href="#">HV-6020</a></td>
+              <td><strong>FloxPro&trade; C-450 Cationic Emulsion</strong><small>High charge &ndash; centrifuge &amp; belt press</small></td>
+              <td><span class="cat cat-flocculant">Flocculant</span></td>
+              <td>Cationic polyacrylamide</td>
+              <td>69418-26-4</td>
+              <td>~45% charge</td>
+              <td>1.05</td>
+              <td>4&ndash;6</td>
+              <td><span class="dg dg-none">Non-DG</span></td>
+              <td><span class="pk">25 L</span><span class="pk">IBC</span></td>
+              <td class="docs"><a href="#">SDS</a><a href="#">TDS</a></td>
+            </tr>
+            <tr data-category="flocculant">
+              <td class="pn"><a href="#">HV-6030</a></td>
+              <td><strong>FloxPro&trade; N-300 Non-ionic</strong><small>Mineral &amp; low pH settling applications</small></td>
+              <td><span class="cat cat-flocculant">Flocculant</span></td>
+              <td>Non-ionic polyacrylamide</td>
+              <td>9003-05-8</td>
+              <td>&lt; 2% charge</td>
+              <td>Powder</td>
+              <td>6&ndash;8<sup>*</sup></td>
+              <td><span class="dg dg-none">Non-DG</span></td>
+              <td><span class="pk">25 kg</span></td>
+              <td class="docs"><a href="#">SDS</a><a href="#">TDS</a></td>
+            </tr>
+            <tr data-category="flocculant">
+              <td class="pn"><a href="#">HV-6040</a></td>
+              <td><strong>FloxPro&trade; C-220 PolyDADMAC</strong><small>Organic coagulant / colour removal</small></td>
+              <td><span class="cat cat-flocculant">Flocculant</span></td>
+              <td>PolyDADMAC</td>
+              <td>26062-79-3</td>
+              <td>40% active</td>
+              <td>1.08</td>
+              <td>5.5</td>
+              <td><span class="dg dg-none">Non-DG</span></td>
+              <td><span class="pk">25 L</span><span class="pk">IBC</span></td>
+              <td class="docs"><a href="#">SDS</a><a href="#">TDS</a></td>
+            </tr>
+
+            <!-- BIOCIDES & OXIDISERS -->
+            <tr data-category="biocide">
+              <td class="pn"><a href="#">HV-7010</a></td>
+              <td><strong>Hydrogen Peroxide 50%</strong><small>Odour control, advanced oxidation</small></td>
+              <td><span class="cat cat-biocide">Oxidiser</span></td>
+              <td>H<sub>2</sub>O<sub>2</sub></td>
+              <td>7722-84-1</td>
+              <td>50% w/w</td>
+              <td>1.20</td>
+              <td>2&ndash;3</td>
+              <td><span class="dg dg-51">5.1</span><small>UN2014 PG II</small></td>
+              <td><span class="pk">25 L</span><span class="pk">IBC</span></td>
+              <td class="docs"><a href="#">SDS</a><a href="#">TDS</a></td>
+            </tr>
+            <tr data-category="biocide">
+              <td class="pn"><a href="#">HV-7020</a></td>
+              <td><strong>Peracetic Acid 15%</strong><small>Wastewater effluent disinfection</small></td>
+              <td><span class="cat cat-biocide">Oxidiser</span></td>
+              <td>CH<sub>3</sub>CO<sub>3</sub>H</td>
+              <td>79-21-0</td>
+              <td>15% w/w</td>
+              <td>1.13</td>
+              <td>&lt; 1</td>
+              <td><span class="dg dg-52">5.2</span><small>UN3109</small></td>
+              <td><span class="pk">20 L</span><span class="pk">IBC</span></td>
+              <td class="docs"><a href="#">SDS</a><a href="#">TDS</a></td>
+            </tr>
+            <tr data-category="biocide">
+              <td class="pn"><a href="#">HV-7030</a></td>
+              <td><strong>BioShield&trade; DB-20 (DBNPA)</strong><small>Fast-kill non-oxidising biocide, RO safe</small></td>
+              <td><span class="cat cat-biocide">Biocide</span></td>
+              <td>DBNPA</td>
+              <td>10222-01-2</td>
+              <td>20% active</td>
+              <td>1.25</td>
+              <td>3.5</td>
+              <td><span class="dg dg-9">9</span><small>UN3082 PG III</small></td>
+              <td><span class="pk">25 L</span><span class="pk">200 L</span></td>
+              <td class="docs"><a href="#">SDS</a><a href="#">TDS</a></td>
+            </tr>
+            <tr data-category="biocide">
+              <td class="pn"><a href="#">HV-7040</a></td>
+              <td><strong>BioShield&trade; IT-15 (Isothiazolinone)</strong><small>Cooling tower &amp; process water biocide</small></td>
+              <td><span class="cat cat-biocide">Biocide</span></td>
+              <td>CMIT / MIT</td>
+              <td>55965-84-9</td>
+              <td>1.5% active</td>
+              <td>1.02</td>
+              <td>3.0</td>
+              <td><span class="dg dg-9">9</span><small>UN3082 PG III</small></td>
+              <td><span class="pk">25 L</span><span class="pk">200 L</span></td>
+              <td class="docs"><a href="#">SDS</a><a href="#">TDS</a></td>
+            </tr>
+
+            <!-- SPECIALTY -->
+            <tr data-category="specialty">
+              <td class="pn"><a href="#">HV-8010</a></td>
+              <td><strong>Sodium Bisulfite 40%</strong><small>Dechlorination &amp; RO feed protection</small></td>
+              <td><span class="cat cat-specialty">Dechlorinator</span></td>
+              <td>NaHSO<sub>3</sub></td>
+              <td>7631-90-5</td>
+              <td>40% w/w</td>
+              <td>1.36</td>
+              <td>4.5</td>
+              <td><span class="dg dg-8">8</span><small>UN2693 PG III</small></td>
+              <td><span class="pk">25 L</span><span class="pk">IBC</span></td>
+              <td class="docs"><a href="#">SDS</a><a href="#">TDS</a></td>
+            </tr>
+            <tr data-category="specialty">
+              <td class="pn"><a href="#">HV-8020</a></td>
+              <td><strong>CorroGuard&trade; ZP-50</strong><small>Zinc orthophosphate &ndash; potable mains corrosion control</small></td>
+              <td><span class="cat cat-specialty">Corrosion Inhibitor</span></td>
+              <td>Zn / PO<sub>4</sub> blend</td>
+              <td>7779-90-0</td>
+              <td>30% PO<sub>4</sub></td>
+              <td>1.45</td>
+              <td>&lt; 1</td>
+              <td><span class="dg dg-8">8</span><small>UN3264 PG III</small></td>
+              <td><span class="pk">25 L</span><span class="pk">IBC</span></td>
+              <td class="docs"><a href="#">SDS</a><a href="#">TDS</a></td>
+            </tr>
+            <tr data-category="specialty">
+              <td class="pn"><a href="#">HV-8030</a></td>
+              <td><strong>O2-Scav&trade; CH-10 (Carbohydrazide)</strong><small>Boiler feedwater oxygen scavenger</small></td>
+              <td><span class="cat cat-specialty">Oxygen Scavenger</span></td>
+              <td>CH<sub>6</sub>N<sub>4</sub>O</td>
+              <td>497-18-7</td>
+              <td>10% w/w</td>
+              <td>1.02</td>
+              <td>8.5</td>
+              <td><span class="dg dg-none">Non-DG</span></td>
+              <td><span class="pk">25 L</span><span class="pk">200 L</span></td>
+              <td class="docs"><a href="#">SDS</a><a href="#">TDS</a></td>
+            </tr>
+            <tr data-category="specialty">
+              <td class="pn"><a href="#">HV-8040</a></td>
+              <td><strong>FoamOut&trade; AF-10 Silicone Antifoam</strong><small>Aeration basin &amp; digester foam control</small></td>
+              <td><span class="cat cat-specialty">Antifoam</span></td>
+              <td>PDMS emulsion</td>
+              <td>63148-62-9</td>
+              <td>10% silicone</td>
+              <td>1.00</td>
+              <td>6&ndash;8</td>
+              <td><span class="dg dg-none">Non-DG</span></td>
+              <td><span class="pk">20 L</span><span class="pk">200 L</span><span class="pk">IBC</span></td>
+              <td class="docs"><a href="#">SDS</a><a href="#">TDS</a></td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="no-results" id="noResults" hidden>No products match your search. Try a product number such as <strong>HV-3010</strong>.</p>
+      </div>
+
+      <div class="table-notes">
+        <p><sup>*</sup> pH measured as 1% aqueous solution. Typical properties only &ndash; refer to the product TDS for specification limits.</p>
+        <div class="legend">
+          <span><span class="dg dg-8">8</span> Corrosive</span>
+          <span><span class="dg dg-51">5.1</span> Oxidising agent</span>
+          <span><span class="dg dg-52">5.2</span> Organic peroxide</span>
+          <span><span class="dg dg-9">9</span> Misc. dangerous goods</span>
+          <span><span class="dg dg-none">Non-DG</span> Not regulated for transport</span>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Packaging / Quality -->
+  <section class="info-band">
+    <div class="container info-grid">
+      <div class="info-text">
+        <h2>Packaging to suit every site</h2>
+        <p>From 20&nbsp;L carboys for remote bore sites to 30&nbsp;tonne bulk tankers for metropolitan treatment plants, every HydroVant product ships in UN-approved packaging with GHS labelling and a current SDS.</p>
+        <ul class="checks">
+          <li>Returnable IBC and drum program</li>
+          <li>Dedicated DG-licensed delivery fleet</li>
+          <li>Batch Certificate of Analysis with every delivery</li>
+          <li>Vendor-managed inventory with tank telemetry</li>
+        </ul>
+        <a href="#" class="btn btn-primary">Talk to a Technical Specialist</a>
+      </div>
+      <div class="info-image">
+        <img src="images/packaging.svg" alt="HydroVant packaging: 20 L carboy, 200 L drum, 1,000 L IBC and 25 kg bag" width="520" height="260">
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <div class="container cta-inner">
+      <div>
+        <h2>Can't find the product you need?</h2>
+        <p>Our applications chemists can blend to specification or recommend an equivalent.</p>
+      </div>
+      <a href="#" class="btn btn-light">Contact Our Team</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <img src="images/logo-white.svg" alt="HydroVant Chemicals" width="200" height="43">
+        <p>Water treatment chemistry, delivered.<br>42 Reservoir Drive, Kembla Grange NSW 2526</p>
+        <p>ABN 00 000 000 000</p>
+      </div>
+      <div>
+        <h4>Products</h4>
+        <a href="#">Acids &amp; Alkalis</a>
+        <a href="#">Disinfection</a>
+        <a href="#">Antiscalants</a>
+        <a href="#">Coagulants &amp; Flocculants</a>
+      </div>
+      <div>
+        <h4>Industries</h4>
+        <a href="#">Municipal Water</a>
+        <a href="#">Wastewater</a>
+        <a href="#">Mining &amp; Resources</a>
+        <a href="#">Power &amp; Boilers</a>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <a href="#">(02) 5550 4400</a>
+        <a href="#">sales@hydrovantchem.com</a>
+        <span class="footer-emergency">24/7 Emergency<br><strong>1800 160 401</strong></span>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>&copy; 2026 HydroVant Chemicals Pty Ltd. All rights reserved.</span>
+      <span><a href="#">Privacy</a> &middot; <a href="#">Terms of Sale</a> &middot; <a href="#">Modern Slavery Statement</a></span>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
